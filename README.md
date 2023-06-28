@@ -8,10 +8,9 @@ This is designed to be run with QNAP QDK locally available, i.e. on a QNAP NAS.
 Possibly this will work on a different Linux distribution with QDK available, but for now it hasn't been tested.
 
 ## Usage
-Example
+Example to build for syncthing version 1.23.5
 ```
-cd syncthing-qnap
-./build.sh 1.25.6
+wget https://github.com/bmachek/syncthing-qnap/raw/master/build.sh -O - | bash -s - 1.23.5
 ```
 
 
