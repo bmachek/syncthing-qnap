@@ -52,25 +52,20 @@ QDK_DATA_DIR_ARM_64=\"arm64\"
 
 echo "build.sh: Downloading icons and configs"
 # FIXME
-wget https://github.com/bmachek/syncthing-qnap/raw/master/syncthing/build_sign.csv
-wget https://github.com/bmachek/syncthing-qnap/raw/master/syncthing/package_routines
+wget https://github.com/bmachek/syncthing-qnap/raw/master/syncthing/build_sign.csv 2> /dev/null
+wget https://github.com/bmachek/syncthing-qnap/raw/master/syncthing/package_routines 2> /dev/null
 cd icons
-wget https://github.com/bmachek/syncthing-qnap/blob/master/syncthing/icons/syncthing.gif?raw=true
-wget https://github.com/bmachek/syncthing-qnap/blob/master/syncthing/icons/syncthing_80.gif?raw=true
-wget https://github.com/bmachek/syncthing-qnap/blob/master/syncthing/icons/syncthing_gray.gif?raw=true
+wget https://github.com/bmachek/syncthing-qnap/blob/master/syncthing/icons/syncthing.gif?raw=true 2> /dev/null
+wget https://github.com/bmachek/syncthing-qnap/blob/master/syncthing/icons/syncthing_80.gif?raw=true 2> /dev/null
+wget https://github.com/bmachek/syncthing-qnap/blob/master/syncthing/icons/syncthing_gray.gif?raw=true 2> /dev/null
 cd ..
 cd shared
-wget https://github.com/bmachek/syncthing-qnap/raw/master/syncthing/shared/syncthing.sh
-wget https://github.com/syncthing/syncthing/raw/main/LICENSE -O LICENSE.txt
-wget https://github.com/syncthing/syncthing/raw/main/AUTHORS -O AUTHORS.txt
+wget https://github.com/bmachek/syncthing-qnap/raw/master/syncthing/shared/syncthing.sh 2> /dev/null
+wget https://github.com/syncthing/syncthing/raw/main/LICENSE -O LICENSE.txt 2> /dev/null
+wget https://github.com/syncthing/syncthing/raw/main/AUTHORS -O AUTHORS.txt 2> /dev/null
 cd .metadata
-wget https://github.com/bmachek/syncthing-qnap/raw/master/syncthing/shared/.metadata/release.sig
+wget https://github.com/bmachek/syncthing-qnap/raw/master/syncthing/shared/.metadata/release.sig 2> /dev/null
 cd ../..
-
-
-# TODO
-# FIXME
-
 
 
 echo "build.sh: Downloading syncthing binaries"
