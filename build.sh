@@ -27,10 +27,6 @@ fi
 echo "build.sh: Creating new build directory"
 qbuild --create-env "${APP_NAME}"
 
-echo "build.sh: Downloading icons and configs"
-# TODO
-# FIXME
-
 
 echo "build.sh: Modifying build configuration"
 cd $(getcfg QDK Install_Path -f /etc/config/qpkg.conf)/"${APP_NAME}"
@@ -52,6 +48,29 @@ QDK_DATA_DIR_X86_64=\"amd64\"
 # Location of file for arm64
 QDK_DATA_DIR_ARM_64=\"arm64\"
 " >> $(getcfg QDK Install_Path -f /etc/config/qpkg.conf)/"${APP_NAME}"/qpkg.cfg
+
+
+echo "build.sh: Downloading icons and configs"
+# FIXME
+wget https://github.com/bmachek/syncthing-qnap/raw/master/syncthing/build_sign.csv
+wget https://github.com/bmachek/syncthing-qnap/raw/master/syncthing/package_routines
+cd icons
+wget https://github.com/bmachek/syncthing-qnap/blob/master/syncthing/icons/syncthing.gif?raw=true
+wget https://github.com/bmachek/syncthing-qnap/blob/master/syncthing/icons/syncthing_80.gif?raw=true
+wget https://github.com/bmachek/syncthing-qnap/blob/master/syncthing/icons/syncthing_gray.gif?raw=true
+cd ..
+cd shared
+wget https://github.com/bmachek/syncthing-qnap/raw/master/syncthing/shared/syncthing.sh
+wget https://github.com/syncthing/syncthing/raw/main/LICENSE -O LICENSE.txt
+wget https://github.com/syncthing/syncthing/raw/main/AUTHORS -O AUTHORS.txt
+cd .metadata
+wget https://github.com/bmachek/syncthing-qnap/raw/master/syncthing/shared/.metadata/release.sig
+cd ../..
+
+
+# TODO
+# FIXME
+
 
 
 echo "build.sh: Downloading syncthing binaries"
