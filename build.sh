@@ -28,9 +28,9 @@ echo "build.sh: Creating new build directory"
 qbuild --create-env "${APP_NAME}"
 
 echo "build.sh: Downloading icons and configs"
-wget https://github.com/bmachek/syncthing-qnap/raw/master/icons_and_txts.zip -O temp.zip 2> /dev/null
-unzip -f temp.zip 2> /dev/null
-rm temp.zip 2> /dev/null
+# TODO
+# FIXME
+
 
 echo "build.sh: Modifying build configuration"
 cd $(getcfg QDK Install_Path -f /etc/config/qpkg.conf)/"${APP_NAME}"
