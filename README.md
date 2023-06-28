@@ -1,9 +1,13 @@
 # syncthing-qnap
 
 ## Usage
-Clone repository.
-Run build.sh with version tag
+Example
+```
+git clone https://github.com/bmachek/syncthing-qnap.git
+cd syncthing-qnap
 ./build.sh 1.25.6
+```
+
 
 
 ## Thanks 
