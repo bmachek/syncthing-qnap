@@ -10,7 +10,6 @@ Possibly this will work on a different Linux distribution with QDK available, bu
 ## Usage
 Example
 ```
-git clone https://github.com/bmachek/syncthing-qnap.git
 cd syncthing-qnap
 ./build.sh 1.25.6
 ```
