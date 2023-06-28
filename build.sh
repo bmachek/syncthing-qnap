@@ -83,6 +83,7 @@ qbuild
 echo "build.sh: QPKG build process finished"
 
 echo "build.sh: Contents of build directory"
+echo $(pwd)/build
 ls -lh build/
 
 echo "build.sh: Finished."
