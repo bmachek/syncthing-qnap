@@ -55,20 +55,16 @@ echo "build.sh: Downloading icons and configs"
 wget https://github.com/bmachek/syncthing-qnap/raw/master/syncthing/build_sign.csv 2> /dev/null
 wget https://github.com/bmachek/syncthing-qnap/raw/master/syncthing/package_routines 2> /dev/null
 mkdir -p icons
-cd icons
-wget https://github.com/bmachek/syncthing-qnap/blob/master/syncthing/icons/syncthing.gif?raw=true 2> /dev/null
-wget https://github.com/bmachek/syncthing-qnap/blob/master/syncthing/icons/syncthing_80.gif?raw=true 2> /dev/null
-wget https://github.com/bmachek/syncthing-qnap/blob/master/syncthing/icons/syncthing_gray.gif?raw=true 2> /dev/null
-cd ..
+wget https://github.com/bmachek/syncthing-qnap/blob/master/syncthing/icons/syncthing.gif?raw=true -O icons/syncthing.gif 2> /dev/null
+wget https://github.com/bmachek/syncthing-qnap/blob/master/syncthing/icons/syncthing_80.gif?raw=true -O icons/syncthing_80.gif 2> /dev/null
+wget https://github.com/bmachek/syncthing-qnap/blob/master/syncthing/icons/syncthing_gray.gif?raw=true -O icons/syncthing_gray.gif 2> /dev/null
 mkdir -p shared
-cd shared
-wget https://github.com/bmachek/syncthing-qnap/raw/master/syncthing/shared/syncthing.sh 2> /dev/null
-wget https://github.com/syncthing/syncthing/raw/main/LICENSE -O LICENSE.txt 2> /dev/null
-wget https://github.com/syncthing/syncthing/raw/main/AUTHORS -O AUTHORS.txt 2> /dev/null
-mkdir -p .metadata
-cd .metadata
-wget https://github.com/bmachek/syncthing-qnap/raw/master/syncthing/shared/.metadata/release.sig 2> /dev/null
-cd ../..
+wget https://github.com/bmachek/syncthing-qnap/raw/master/syncthing/shared/syncthing.sh -O shared/syncthing.sh 2> /dev/null
+wget https://github.com/syncthing/syncthing/raw/main/LICENSE -O shared/LICENSE.txt 2> /dev/null
+wget https://github.com/syncthing/syncthing/raw/main/AUTHORS -O shared/AUTHORS.txt 2> /dev/null
+mkdir -p shared/.metadata
+wget https://github.com/bmachek/syncthing-qnap/raw/master/syncthing/shared/.metadata/release.sig -O shared/.metadata/release.sig 2> /dev/null
+
 
 
 echo "build.sh: Downloading syncthing binaries"
