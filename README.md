@@ -3,6 +3,10 @@
 ## State
 This is work in progress.
 
+## Support my work
+
+[![Donate](https://img.shields.io/badge/Donate-PayPal-green.svg)](https://www.paypal.com/donate/?hosted_button_id=2LL4K9LN5CFA6)
+
 ## Requirements
 This is designed to be run with QNAP QDK locally available, i.e. on a QNAP NAS.
 Possibly this will work on a different Linux distribution with QDK available, but for now it hasn't been tested.
